@@ -18,8 +18,8 @@ function(getPathToExternals)
 	set(googletest_LIB ${binary_dir})
 	set(googletest_INC ${source_dir}/include)
 
-	set(ALL_EXTERNAL_LIBS ${googletest_LIB} ${zxingcpp_LIB} PARENT_SCOPE)
-	set(ALL_EXTERNAL_INCS ${googletest_INC} ${zxingcpp_INC} PARENT_SCOPE)
+	set(ALL_EXTERNAL_LIBS ${googletest_LIB} PARENT_SCOPE)
+	set(ALL_EXTERNAL_INCS ${googletest_INC} PARENT_SCOPE)
 endfunction()
 
 
@@ -96,7 +96,7 @@ endfunction()
 # \param[in]	dependencies - names of porjects that LOCAL_PROJECT_NAME depends on
 # \example 
 #			add_definitions("-D_VARIADIC_MAX=10") # options and definitions can be added BEFORE
-
+#
 # 			set(libs setError ${LOCAL_PROJECT_NAME}_static)
 # 			set(dep setError)
 # 			addLibrary(	SHARED 							# type
